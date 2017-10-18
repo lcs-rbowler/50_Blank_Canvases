@@ -22,8 +22,32 @@ let canvas = Canvas(width: 400, height: 300)
  
  Use whitespace and comments as appropriate.
  */
-// Replace this comment with your first comment – what is the goal of the code you're about to write?
+// Create a starting point for travelling through Perlin noise space
+var start = 0.0
 
+// Create Perlin noise generator
+let p = PerlinGenerator()
+
+for x in stride(from: 0, through: 400, by: 1) {
+    // Move through Perlin noise space
+    start += 0.01
+    
+    // Get Perlin noise (gives is a random number between -1 and 1)
+    let randomValue = p.perlinNoise(x: start)
+    
+    // Convert to a range between 0 and 100
+    let height = map(value: randomValue, fromLower: -1, fromUpper: 1, toLower: 0, toUpper: 300)
+    
+    // Make the height an integer
+    let toY = Int(height)
+    
+    // Set the Colour
+    canvas.lineColor = Color(hue: x, saturation: 100, brightness: toY, alpha: 100)
+
+    
+    // Draw the line
+    canvas.drawLine(fromX: x, fromY: 0, toX: x, toY: toY)
+}
 
 
 /*:

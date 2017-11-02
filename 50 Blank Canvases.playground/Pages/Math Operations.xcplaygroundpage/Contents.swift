@@ -1,4 +1,4 @@
-//: [Previous](@previous)
+//: [Previous](@previous) / [Next](@next)
 //: # A Blank Canvas
 //:
 //: Use this page to experiment. Have fun!
@@ -13,7 +13,7 @@ import Cocoa
 import PlaygroundSupport
 
 // Create canvas
-let canvas = Canvas(width: 400, height: 300)
+let canvas = Canvas(width: 500, height: 500)
 
 /*:
  ## Add your code below
@@ -22,9 +22,20 @@ let canvas = Canvas(width: 400, height: 300)
  
  Use whitespace and comments as appropriate.
  */
-// Replace this comment with your first comment – what is the goal of the code you're about to write?
+// Declare Co-ordinates
+let x1 = 300.0
+let x2 = 450.0
+let y1 = 100.0
+let y2 = 500.0
 
+// Find Length
+let xpow = pow(x1 - x2, 2)
+let ypow = pow(y1 - y2, 2)
+let length = sqrt(xpow + ypow)
+print(length)
 
+let oneLineLength = sqrt(pow(x1 - x2, 2) + pow(y1 - y2, 2))
+print(oneLineLength)
 
 /*:
  ## Use source control
@@ -46,4 +57,3 @@ let canvas = Canvas(width: 400, height: 300)
  */
 // Don't remove the code below
 PlaygroundPage.current.liveView = canvas.imageView
-

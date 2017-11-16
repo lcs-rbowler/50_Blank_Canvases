@@ -37,7 +37,6 @@ canvas.drawLine(fromX: 0, fromY: 0, toX: 200, toY: 0)
 canvas.translate(byX: 200, byY: 0)
 canvas.rotate(by: 120)
 
-
 /*:
  ## Use source control
  To keep your work organized, and receive feedback, source control is a must.

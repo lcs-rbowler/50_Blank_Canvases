@@ -1,5 +1,5 @@
 //: [Previous](@previous) / [Next](@next)
-//: # A Blank Canvas
+//: # Abstractions with Functions
 //:
 //: Use this page to experiment. Have fun!
 /*:
@@ -15,15 +15,27 @@ import PlaygroundSupport
 // Create canvas
 let canvas = Canvas(width: 400, height: 300)
 
-/*:
- ## Add your code below
- 
- Be sure to write human-readable code.
- 
- Use whitespace and comments as appropriate.
- */
-// Replace this comment with your first comment – what is the goal of the code you're about to write?
+// Draw a triangle using the metaphor of a "turtle"
 
+// Step 1: Move to starting point
+canvas.translate(byX: 75, byY: 100)
+canvas.drawAxes()
+
+// Step 2: Draw 1st side and rotate
+canvas.defaultLineWidth = 5
+canvas.drawLine(fromX: 0, fromY: 0, toX: 200, toY: 0)
+canvas.translate(byX: 200, byY: 0)
+canvas.rotate(by: 120)
+
+// Step 3: Draw 2nd side and rotate
+canvas.drawLine(fromX: 0, fromY: 0, toX: 200, toY: 0)
+canvas.translate(byX: 200, byY: 0)
+canvas.rotate(by: 120)
+
+// Step 4: Draw 3rd side and rotate
+canvas.drawLine(fromX: 0, fromY: 0, toX: 200, toY: 0)
+canvas.translate(byX: 200, byY: 0)
+canvas.rotate(by: 120)
 
 
 /*:

@@ -22,9 +22,35 @@ let canvas = Canvas(width: 400, height: 300)
  
  Use whitespace and comments as appropriate.
  */
-// Replace this comment with your first comment – what is the goal of the code you're about to write?
+// Cabin Point
+struct Point {
+    var x : Double = 0.0
+    var y : Double = 0.0
+}
 
+let cabin = Point(x: 6.0, y: 1.5)
 
+// Defining Slope
+struct Slope {
+    var rise : Double = 1.0
+    var run : Double = 1.0
+}
+
+// Defining Slope of a Line
+struct Line {
+    var slope : Slope = Slope(rise: 1.0, run: 1.0)
+    var verticalIntercept : Double = 0.0
+}
+func getSlopeOfCabinRoad(from givenLine: Line) -> Slope {
+    return Slope(rise: givenLine.slope.run, run: givenLine.slope.rise * -1 )
+}
+
+// Create campsite road
+var slopeOfCampsiteRoad = Slope(rise: -1, run: 2)
+var campsiteRoad = Line(slope: slopeOfCampsiteRoad, verticalIntercept: 9.5)
+
+// Get slope of cabin road
+let cabinRoadSlope = getSlopeOfCabinRoad(from: campsiteRoad)
 
 /*:
  ## Use source control

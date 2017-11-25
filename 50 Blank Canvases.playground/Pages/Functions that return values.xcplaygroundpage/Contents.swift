@@ -15,6 +15,10 @@ import PlaygroundSupport
 // Create canvas
 let canvas = Canvas(width: 400, height: 300)
 
+func divide(this: Double, by: Double) -> Double {
+    return this/by
+}
+divide(this: 0, by: 0)
 /*:
  ## Add your code below
  
